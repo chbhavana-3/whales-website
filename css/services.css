@@ -1,0 +1,254 @@
+/* ==== Global Reset ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* ==== HERO BANNER ==== */
+.hero-banner {
+  background: url('../assets/servvices-banner.jpg') center/cover no-repeat;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.hero-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.hero-nav .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.hero-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.hero-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+.hero-text {
+  max-width: 800px;
+  margin: auto;
+  z-index: 2;
+}
+.hero-text h1 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+/* ==== Services Intro ==== */
+.services-intro {
+  background-color: #000;
+  padding: 80px 20px;
+  text-align: center;
+}
+.intro-container {
+  max-width: 900px;
+  margin: auto;
+}
+.intro-heading {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.intro-subtext {
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+/* ==== Shared Section Base ==== */
+.section,
+.production-section,
+.postproduction-section,
+.dynamics-section,
+.unreal-section,
+.editing-section {
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 80px 0;
+  min-height: 500px;
+  position: relative;
+  transition: background-color 0.4s ease;
+}
+
+/* ==== Overlay (Dark + Hover Effect) ==== */
+.section::before,
+.production-overlay,
+.postproduction-overlay,
+.dynamics-overlay,
+.unreal-overlay,
+.editing-overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  transition: background-color 0.4s ease;
+  z-index: 1;
+}
+.section:hover::before,
+.production-section:hover .production-overlay,
+.postproduction-section:hover .postproduction-overlay,
+.dynamics-section:hover .dynamics-overlay,
+.unreal-section:hover .unreal-overlay,
+.editing-section:hover .editing-overlay {
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+/* ==== Section Containers ==== */
+.section-overlay,
+.production-container,
+.postproduction-container,
+.dynamics-container,
+.unreal-container,
+.editing-container {
+  position: relative;
+  z-index: 2;
+  padding: 60px 40px;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ==== Titles ==== */
+.section-title,
+.production-title,
+.postproduction-title,
+.dynamics-title,
+.unreal-title,
+.editing-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.9);
+}
+
+/* ==== Tag Layout ==== */
+.section-tags,
+.production-tags,
+.postproduction-tags,
+.dynamics-tags,
+.unreal-tags,
+.editing-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.section-tags span,
+.production-tags span,
+.postproduction-tags span,
+.dynamics-tags span,
+.unreal-tags span,
+.editing-tags span {
+  background: linear-gradient(to right, #9c27b0, #e91e63);
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+.section-tags span:hover,
+.production-tags span:hover,
+.postproduction-tags span:hover,
+.dynamics-tags span:hover,
+.unreal-tags span:hover,
+.editing-tags span:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #b530cc, #f23e76);
+}
+
+/* ==== Text Content ==== */
+.section-text,
+.production-text,
+.postproduction-text,
+.dynamics-text,
+.unreal-text,
+.editing-text {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.7;
+}
+
+/* ==== Footer ==== */
+.site-footer {
+  background: #111;
+  padding: 60px 20px 20px;
+  color: #ccc;
+}
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: auto;
+  gap: 40px;
+}
+.footer-columns h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+.footer-columns a {
+  color: #ccc;
+  text-decoration: none;
+}
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  border-top: 1px solid #333;
+}
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+  .hero-nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .section-tags,
+  .production-tags,
+  .postproduction-tags {
+    justify-content: center;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+}
